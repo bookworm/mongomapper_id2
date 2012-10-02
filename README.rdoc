@@ -19,6 +19,7 @@ This gem was based on this post http://ihswebdesign.com/blog/autoincrement-in-mo
   # app/models/movie.rb
   class Movie
     include MongoMapper::Document
+    plugin MongoMapper::Plugins::AutoIncrement
     
     key :title, String 
     # Here is the mongomapper_id2
@@ -42,7 +43,8 @@ If you want to override the default id, just add the option ":override => true"
   # app/models/movie.rb
   class Movie
     include MongoMapper::Document
-  
+    plugin MongoMapper::Plugins::AutoIncrement
+
     key :title, String 
     # Here is the mongomapper_id2
     auto_increment! :override => true

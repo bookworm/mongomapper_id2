@@ -26,5 +26,3 @@ module MongoMapper
     end
   end
 end
-
-MongoMapper::Document.plugin(MongoMapper::Plugins::AutoIncrement)
